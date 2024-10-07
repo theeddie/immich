@@ -25,6 +25,10 @@ Copy the entire `immich-server` block as a new service and make the following ch
 -     - 2283:3001
 + immich-microservices:
 +   container_name: immich_microservices
+    ports:
+-     - 3003:3003
+
+
 ```
 
 Once you have two copies of the immich-server service, make the following changes to each one. This will allow one container to only serve the web UI and API, and the other one to handle all other tasks.
